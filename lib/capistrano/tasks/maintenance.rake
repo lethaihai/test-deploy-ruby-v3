@@ -5,20 +5,16 @@ namespace :maintenance do
   desc "Enable maintenance mode"
   task :enable do
     on roles(:app) do
-      within release_path do
-        execute "cp #{SOURCE_FILE} #{DEST_FILE}"
-        info "Maintenance mode is enabled"
-      end
+      execute "ln -s #{release_path}/#{SOURCE_FILE} #{release_path}/#{DEST_FILE}"
+      info "Maintenance mode is enabled"
     end
   end
 
   desc "Disbale maintenance mode"
   task :disable do
     on roles(:app) do
-      within release_path do
-        execute "rm #{DEST_FILE}"
-        info "Maintenance mode is disabled"
-      end
+      execute "rm -f #{release_path}/#{DEST_FILE}"
+      info "Maintenance mode is disabled"
     end
   end
 end
