@@ -1,0 +1,7 @@
+#!/bin/bash
+USER=$(whoami)
+RVM_CMD="$(which rvm) default do bundler exec"
+
+su - $USER -c "$RVM_CMD"
+echo $?
+su - $USER -c "$RVM_CMD" > /dev/null 2>&1
