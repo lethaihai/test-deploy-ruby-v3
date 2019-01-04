@@ -1,3 +1,4 @@
 tasks:
-  # - SomeClass
-  # - SomeOtherClass
+  - AbcDefGhiTask
+  - LoremIpsumDolorSitAmetTask
+  - UpdateAllNilValuesTask
