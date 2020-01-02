@@ -2,7 +2,7 @@
 lock "3.9.0"
 
 set :application, "test_deploy_v3"
-set :repo_url, "git@github.com:namnv609/test-deploy-ruby-v3.git"
+set :repo_url, "git@github.com:lethaihai/test-deploy-ruby-v3.git"
 set :bundle_binstubs, nil
 
 # Default deploy_to directory is /var/www/my_app_name
